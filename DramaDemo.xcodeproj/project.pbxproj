@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		087D2BC8264198620089D5B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087D2BC7264198620089D5B0 /* AppDelegate.swift */; };
 		087D2BCA264198620089D5B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087D2BC9264198620089D5B0 /* SceneDelegate.swift */; };
-		087D2BCC264198620089D5B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087D2BCB264198620089D5B0 /* ViewController.swift */; };
-		087D2BCF264198620089D5B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 087D2BCD264198620089D5B0 /* Main.storyboard */; };
 		087D2BD1264198620089D5B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 087D2BD0264198620089D5B0 /* Assets.xcassets */; };
 		087D2BD4264198620089D5B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 087D2BD2264198620089D5B0 /* LaunchScreen.storyboard */; };
+		087D2BE4264198A70089D5B0 /* DramaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087D2BE2264198A70089D5B0 /* DramaListViewController.swift */; };
+		087D2BE5264198A70089D5B0 /* DramaListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087D2BE3264198A70089D5B0 /* DramaListViewController.xib */; };
+		087D2BE8264198BB0089D5B0 /* DramaListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087D2BE7264198BB0089D5B0 /* DramaListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		087D2BC4264198620089D5B0 /* DramaDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DramaDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		087D2BC7264198620089D5B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		087D2BC9264198620089D5B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		087D2BCB264198620089D5B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		087D2BCE264198620089D5B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		087D2BD0264198620089D5B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		087D2BD3264198620089D5B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		087D2BD5264198620089D5B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		087D2BE2264198A70089D5B0 /* DramaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaListViewController.swift; sourceTree = "<group>"; };
+		087D2BE3264198A70089D5B0 /* DramaListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DramaListViewController.xib; sourceTree = "<group>"; };
+		087D2BE7264198BB0089D5B0 /* DramaListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				087D2BC7264198620089D5B0 /* AppDelegate.swift */,
 				087D2BC9264198620089D5B0 /* SceneDelegate.swift */,
-				087D2BCB264198620089D5B0 /* ViewController.swift */,
-				087D2BCD264198620089D5B0 /* Main.storyboard */,
+				087D2BE2264198A70089D5B0 /* DramaListViewController.swift */,
+				087D2BE3264198A70089D5B0 /* DramaListViewController.xib */,
+				087D2BE7264198BB0089D5B0 /* DramaListViewModel.swift */,
 				087D2BD0264198620089D5B0 /* Assets.xcassets */,
 				087D2BD2264198620089D5B0 /* LaunchScreen.storyboard */,
 				087D2BD5264198620089D5B0 /* Info.plist */,
@@ -124,9 +127,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				087D2BE5264198A70089D5B0 /* DramaListViewController.xib in Resources */,
 				087D2BD4264198620089D5B0 /* LaunchScreen.storyboard in Resources */,
 				087D2BD1264198620089D5B0 /* Assets.xcassets in Resources */,
-				087D2BCF264198620089D5B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				087D2BCC264198620089D5B0 /* ViewController.swift in Sources */,
+				087D2BE4264198A70089D5B0 /* DramaListViewController.swift in Sources */,
+				087D2BE8264198BB0089D5B0 /* DramaListViewModel.swift in Sources */,
 				087D2BC8264198620089D5B0 /* AppDelegate.swift in Sources */,
 				087D2BCA264198620089D5B0 /* SceneDelegate.swift in Sources */,
 			);
@@ -146,14 +150,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		087D2BCD264198620089D5B0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				087D2BCE264198620089D5B0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		087D2BD2264198620089D5B0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
