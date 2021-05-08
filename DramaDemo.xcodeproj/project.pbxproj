@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,12 @@
 		087D2BE4264198A70089D5B0 /* DramaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087D2BE2264198A70089D5B0 /* DramaListViewController.swift */; };
 		087D2BE5264198A70089D5B0 /* DramaListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087D2BE3264198A70089D5B0 /* DramaListViewController.xib */; };
 		087D2BE8264198BB0089D5B0 /* DramaListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087D2BE7264198BB0089D5B0 /* DramaListViewModel.swift */; };
+		08AD9DE2264692DB0003138E /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AD9DE1264692DB0003138E /* Double+Extension.swift */; };
+		08AD9DE726469AED0003138E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AD9DE626469AED0003138E /* Date+Extension.swift */; };
+		08E0CCDB26419CE500AB5A20 /* Drama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E0CCDA26419CE500AB5A20 /* Drama.swift */; };
+		08E0CCE226419EDE00AB5A20 /* DramaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E0CCE026419EDE00AB5A20 /* DramaTableViewCell.swift */; };
+		08E0CCE326419EDE00AB5A20 /* DramaTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E0CCE126419EDE00AB5A20 /* DramaTableViewCell.xib */; };
+		08E0CCE626419EE800AB5A20 /* DramaTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E0CCE526419EE800AB5A20 /* DramaTableViewCellViewModel.swift */; };
 		26683EC12A512365914DA98A /* Pods_DramaDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D93B6D174C07897E89413A33 /* Pods_DramaDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +33,12 @@
 		087D2BE2264198A70089D5B0 /* DramaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaListViewController.swift; sourceTree = "<group>"; };
 		087D2BE3264198A70089D5B0 /* DramaListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DramaListViewController.xib; sourceTree = "<group>"; };
 		087D2BE7264198BB0089D5B0 /* DramaListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaListViewModel.swift; sourceTree = "<group>"; };
+		08AD9DE1264692DB0003138E /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		08AD9DE626469AED0003138E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		08E0CCDA26419CE500AB5A20 /* Drama.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drama.swift; sourceTree = "<group>"; };
+		08E0CCE026419EDE00AB5A20 /* DramaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaTableViewCell.swift; sourceTree = "<group>"; };
+		08E0CCE126419EDE00AB5A20 /* DramaTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DramaTableViewCell.xib; sourceTree = "<group>"; };
+		08E0CCE526419EE800AB5A20 /* DramaTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		4DC10B0C16AFDBD4DB03DBF8 /* Pods-DramaDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DramaDemo.debug.xcconfig"; path = "Target Support Files/Pods-DramaDemo/Pods-DramaDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		4FF4B5D60615410CA6924049 /* Pods-DramaDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DramaDemo.release.xcconfig"; path = "Target Support Files/Pods-DramaDemo/Pods-DramaDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D93B6D174C07897E89413A33 /* Pods_DramaDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DramaDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +79,9 @@
 			children = (
 				087D2BC7264198620089D5B0 /* AppDelegate.swift */,
 				087D2BC9264198620089D5B0 /* SceneDelegate.swift */,
+				08AD9DE4264692DE0003138E /* Extensions */,
+				08E0CCDD26419CF400AB5A20 /* Model */,
+				08E0CCE826419EEE00AB5A20 /* Cell */,
 				087D2BE2264198A70089D5B0 /* DramaListViewController.swift */,
 				087D2BE3264198A70089D5B0 /* DramaListViewController.xib */,
 				087D2BE7264198BB0089D5B0 /* DramaListViewModel.swift */,
@@ -77,13 +92,39 @@
 			path = DramaDemo;
 			sourceTree = "<group>";
 		};
+		08AD9DE4264692DE0003138E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				08AD9DE1264692DB0003138E /* Double+Extension.swift */,
+				08AD9DE626469AED0003138E /* Date+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		08E0CCDD26419CF400AB5A20 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				08E0CCDA26419CE500AB5A20 /* Drama.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		08E0CCE826419EEE00AB5A20 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				08E0CCE026419EDE00AB5A20 /* DramaTableViewCell.swift */,
+				08E0CCE126419EDE00AB5A20 /* DramaTableViewCell.xib */,
+				08E0CCE526419EE800AB5A20 /* DramaTableViewCellViewModel.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		4B665CA2E458F860AD21DD4B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				4DC10B0C16AFDBD4DB03DBF8 /* Pods-DramaDemo.debug.xcconfig */,
 				4FF4B5D60615410CA6924049 /* Pods-DramaDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -157,6 +198,7 @@
 				087D2BE5264198A70089D5B0 /* DramaListViewController.xib in Resources */,
 				087D2BD4264198620089D5B0 /* LaunchScreen.storyboard in Resources */,
 				087D2BD1264198620089D5B0 /* Assets.xcassets in Resources */,
+				08E0CCE326419EDE00AB5A20 /* DramaTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,10 +251,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08E0CCDB26419CE500AB5A20 /* Drama.swift in Sources */,
 				087D2BE4264198A70089D5B0 /* DramaListViewController.swift in Sources */,
 				087D2BE8264198BB0089D5B0 /* DramaListViewModel.swift in Sources */,
+				08E0CCE226419EDE00AB5A20 /* DramaTableViewCell.swift in Sources */,
+				08AD9DE2264692DB0003138E /* Double+Extension.swift in Sources */,
+				08E0CCE626419EE800AB5A20 /* DramaTableViewCellViewModel.swift in Sources */,
 				087D2BC8264198620089D5B0 /* AppDelegate.swift in Sources */,
 				087D2BCA264198620089D5B0 /* SceneDelegate.swift in Sources */,
+				08AD9DE726469AED0003138E /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

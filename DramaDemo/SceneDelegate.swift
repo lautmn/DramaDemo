@@ -19,7 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     guard let windowScene = (scene as? UIWindowScene) else { return }
     window = UIWindow(frame: windowScene.coordinateSpace.bounds)
     window?.windowScene = windowScene
-    window?.rootViewController = DramaListViewController()
+    let dramaListVC = DramaListViewController()
+    dramaListVC.setViewModel(viewModel: DramaListViewModel())
+    let rootVC = UINavigationController(rootViewController: dramaListVC)
+    window?.rootViewController = rootVC
     window?.makeKeyAndVisible()
   }
 

@@ -6,24 +6,26 @@
 //
 
 import UIKit
+import RxSwift
 
 class DramaListViewController: UIViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  @IBOutlet weak var dramaTableView: UITableView!
 
-    // Do any additional setup after loading the view.
+  var viewModel: DramaListViewModel?
+
+  func setViewModel(viewModel: DramaListViewModel) {
+    self.viewModel = viewModel
   }
 
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    viewModel?.getDramas()
+    dramaTableView.register(UINib(nibName: "DramaTableViewCell", bundle: nil), forCellReuseIdentifier: "DramaTableViewCell")
 
-  /*
-   // MARK: - Navigation
-
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destination.
-   // Pass the selected object to the new view controller.
-   }
-   */
-
+    _ = viewModel?.dramas
+      .take(until: rx.deallocated)
+      .bind(to: dramaTableView.rx.items(cellIdentifier: "DramaTableViewCell", cellType: DramaTableViewCell.self)) { row, element, cell in
+        cell.viewModel = DramaTableViewCellViewModel(drama: element) }
+  }
 }
