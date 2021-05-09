@@ -9,5 +9,6 @@ target 'DramaDemo' do
   pod 'Alamofire', '5.4.3'
   pod 'RxSwift', '6.1.0'
   pod 'RxCocoa', '6.1.0'
+  pod 'Kingfisher', '6.3.0'
 
 end
