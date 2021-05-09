@@ -36,6 +36,8 @@ class DramaListViewController: BaseViewController {
       .bind(to: dramaTableView.rx.items(cellIdentifier: "DramaTableViewCell", cellType: DramaTableViewCell.self)) { row, element, cell in
         cell.viewModel = DramaTableViewCellViewModel(drama: element) }
 
+    viewModel?.searchText.accept(PreferenceManager.instance.getString(by: .searchText) ?? "")
+
     navigationItem.title = "戲劇列表"
   }
 
@@ -101,6 +103,7 @@ class DramaListViewController: BaseViewController {
   @IBAction func pressedCancelButton(_ sender: Any) {
     view.endEditing(true)
     viewModel?.searchText.accept("")
+    PreferenceManager.instance.setValue("", for: .searchText)
     setCancelButton(isHidden: true)
   }
 
@@ -120,5 +123,6 @@ class DramaListViewController: BaseViewController {
 extension DramaListViewController: UISearchBarDelegate {
   func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
     viewModel?.searchText.accept(searchText)
+    PreferenceManager.instance.setValue(searchText, for: .searchText)
   }
 }

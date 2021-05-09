@@ -23,6 +23,7 @@
 		089759602647EE2D00E5CB3E /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897595F2647EE2D00E5CB3E /* Int+Extension.swift */; };
 		089759622647F21500E5CB3E /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089759612647F21500E5CB3E /* DateFormatter+Extension.swift */; };
 		089759642648315300E5CB3E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089759632648315300E5CB3E /* BaseViewController.swift */; };
+		089759682648390B00E5CB3E /* PreferenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089759672648390B00E5CB3E /* PreferenceManager.swift */; };
 		08AD9DE2264692DB0003138E /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AD9DE1264692DB0003138E /* Double+Extension.swift */; };
 		08AD9DE726469AED0003138E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AD9DE626469AED0003138E /* Date+Extension.swift */; };
 		08E0CCDB26419CE500AB5A20 /* Drama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E0CCDA26419CE500AB5A20 /* Drama.swift */; };
@@ -51,6 +52,7 @@
 		0897595F2647EE2D00E5CB3E /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		089759612647F21500E5CB3E /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		089759632648315300E5CB3E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		089759672648390B00E5CB3E /* PreferenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceManager.swift; sourceTree = "<group>"; };
 		08AD9DE1264692DB0003138E /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		08AD9DE626469AED0003138E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		08E0CCDA26419CE500AB5A20 /* Drama.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drama.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				08AD9DE4264692DE0003138E /* Extensions */,
 				08E0CCDD26419CF400AB5A20 /* Model */,
 				08E0CCE826419EEE00AB5A20 /* Cell */,
+				089759672648390B00E5CB3E /* PreferenceManager.swift */,
 				089759632648315300E5CB3E /* BaseViewController.swift */,
 				087D2BE2264198A70089D5B0 /* DramaListViewController.swift */,
 				087D2BE3264198A70089D5B0 /* DramaListViewController.xib */,
@@ -284,6 +287,7 @@
 				0897595A2647E57600E5CB3E /* DramaDetailViewModel.swift in Sources */,
 				087D2BE4264198A70089D5B0 /* DramaListViewController.swift in Sources */,
 				089759602647EE2D00E5CB3E /* Int+Extension.swift in Sources */,
+				089759682648390B00E5CB3E /* PreferenceManager.swift in Sources */,
 				087D2BE8264198BB0089D5B0 /* DramaListViewModel.swift in Sources */,
 				08E0CCE226419EDE00AB5A20 /* DramaTableViewCell.swift in Sources */,
 				08AD9DE2264692DB0003138E /* Double+Extension.swift in Sources */,
