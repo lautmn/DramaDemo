@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,7 +10,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DramaListViewController" customModule="DramaDemo" customModuleProvider="target">
             <connections>
+                <outlet property="cancelButton" destination="UUT-DK-pou" id="TEc-fh-UCk"/>
                 <outlet property="dramaTableView" destination="4B3-7y-yCw" id="ovy-da-8bd"/>
+                <outlet property="noSearchResultLabel" destination="PJS-d8-Cug" id="sof-2P-sY0"/>
+                <outlet property="searchBar" destination="6Ga-7h-kFi" id="oyG-xW-lct"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,20 +22,53 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4B3-7y-yCw">
-                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGe-6S-Iqg">
+                    <rect key="frame" x="414" y="44" width="0.0" height="0.0"/>
+                    <subviews>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUT-DK-pou">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="51"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="JgT-ao-Jdw"/>
+                            </constraints>
+                            <state key="normal" title="取消"/>
+                            <connections>
+                                <action selector="pressedCancelButton:" destination="-1" eventType="touchUpInside" id="QSJ-DR-v2u"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4B3-7y-yCw">
+                    <rect key="frame" x="0.0" y="95" width="414" height="767"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="6Ga-7h-kFi">
+                    <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="沒有任何搜尋結果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PJS-d8-Cug">
+                    <rect key="frame" x="137.5" y="105" width="139" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="6Ga-7h-kFi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="2f7-fT-K00"/>
+                <constraint firstItem="PJS-d8-Cug" firstAttribute="top" secondItem="6Ga-7h-kFi" secondAttribute="bottom" constant="10" id="3Td-ft-eOX"/>
+                <constraint firstItem="vGe-6S-Iqg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="DbM-CY-30z"/>
+                <constraint firstItem="PJS-d8-Cug" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="L23-cS-QLl"/>
                 <constraint firstItem="4B3-7y-yCw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NBD-yU-s3n"/>
+                <constraint firstItem="UUT-DK-pou" firstAttribute="height" secondItem="6Ga-7h-kFi" secondAttribute="height" id="NtD-43-yX9"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4B3-7y-yCw" secondAttribute="trailing" id="Tq9-Zs-y23"/>
-                <constraint firstItem="4B3-7y-yCw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="gFg-CE-VIh"/>
+                <constraint firstItem="vGe-6S-Iqg" firstAttribute="leading" secondItem="6Ga-7h-kFi" secondAttribute="trailing" id="k1j-GC-4hu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4B3-7y-yCw" secondAttribute="bottom" id="oie-mJ-hyS"/>
+                <constraint firstItem="4B3-7y-yCw" firstAttribute="top" secondItem="6Ga-7h-kFi" secondAttribute="bottom" id="qgA-Zb-cjA"/>
+                <constraint firstItem="6Ga-7h-kFi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yOz-RY-ZWh"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vGe-6S-Iqg" secondAttribute="trailing" id="zzz-YF-1RC"/>
             </constraints>
-            <point key="canvasLocation" x="-146" y="-11"/>
+            <point key="canvasLocation" x="-146.37681159420291" y="-11.383928571428571"/>
         </view>
     </objects>
     <resources>

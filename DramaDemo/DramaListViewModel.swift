@@ -7,12 +7,22 @@
 
 import Foundation
 import Alamofire
+import RxSwift
 import RxCocoa
 
 class DramaListViewModel {
 
   let dramas = BehaviorRelay<[Drama]>(value: [])
   let isLoadingIndicatorHidden = BehaviorRelay<Bool>(value: true)
+  let searchText = BehaviorRelay<String>(value: "")
+
+  var dataSource: Observable<[Drama]> {
+    return Observable
+      .combineLatest(dramas, searchText)
+      .map { dramas, searchText in
+        if searchText.isEmpty { return dramas }
+        return self.getSearchDramas(dramas: dramas, searchText: searchText) }
+  }
 
   func getDramas() {
     let decoder = JSONDecoder()
@@ -34,5 +44,11 @@ class DramaListViewModel {
                           localFormatter.timeZone = .current
                           print(localFormatter.string(from: date))
                          })
+  }
+
+  private func getSearchDramas(dramas: [Drama], searchText: String) -> [Drama] {
+    return dramas
+      .sorted(by: { ($0.name?.getSimilarity(to: searchText) ?? 0) > ($1.name?.getSimilarity(to: searchText) ?? 0) })
+      .filter { $0.name?.getSimilarity(to: searchText) ?? 0 > 0 }
   }
 }

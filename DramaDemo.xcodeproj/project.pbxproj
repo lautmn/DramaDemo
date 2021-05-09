@@ -14,6 +14,7 @@
 		087D2BE4264198A70089D5B0 /* DramaListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087D2BE2264198A70089D5B0 /* DramaListViewController.swift */; };
 		087D2BE5264198A70089D5B0 /* DramaListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087D2BE3264198A70089D5B0 /* DramaListViewController.xib */; };
 		087D2BE8264198BB0089D5B0 /* DramaListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087D2BE7264198BB0089D5B0 /* DramaListViewModel.swift */; };
+		089759542647D73C00E5CB3E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089759532647D73C00E5CB3E /* String+Extension.swift */; };
 		08AD9DE2264692DB0003138E /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AD9DE1264692DB0003138E /* Double+Extension.swift */; };
 		08AD9DE726469AED0003138E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AD9DE626469AED0003138E /* Date+Extension.swift */; };
 		08E0CCDB26419CE500AB5A20 /* Drama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E0CCDA26419CE500AB5A20 /* Drama.swift */; };
@@ -33,6 +34,7 @@
 		087D2BE2264198A70089D5B0 /* DramaListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaListViewController.swift; sourceTree = "<group>"; };
 		087D2BE3264198A70089D5B0 /* DramaListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DramaListViewController.xib; sourceTree = "<group>"; };
 		087D2BE7264198BB0089D5B0 /* DramaListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaListViewModel.swift; sourceTree = "<group>"; };
+		089759532647D73C00E5CB3E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		08AD9DE1264692DB0003138E /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		08AD9DE626469AED0003138E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		08E0CCDA26419CE500AB5A20 /* Drama.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drama.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				08AD9DE1264692DB0003138E /* Double+Extension.swift */,
 				08AD9DE626469AED0003138E /* Date+Extension.swift */,
+				089759532647D73C00E5CB3E /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				08E0CCE626419EE800AB5A20 /* DramaTableViewCellViewModel.swift in Sources */,
 				087D2BC8264198620089D5B0 /* AppDelegate.swift in Sources */,
 				087D2BCA264198620089D5B0 /* SceneDelegate.swift in Sources */,
+				089759542647D73C00E5CB3E /* String+Extension.swift in Sources */,
 				08AD9DE726469AED0003138E /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
