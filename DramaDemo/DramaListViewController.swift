@@ -61,6 +61,14 @@ class DramaListViewController: UIViewController {
       .asDriver(onErrorJustReturn: true)
       .drive(noSearchResultLabel.rx.isHidden)
       .disposed(by: disposeBag)
+
+    dramaTableView.rx
+      .modelSelected(Drama.self)
+      .asDriver()
+      .drive(
+        onNext: { [weak self] drama in
+          self?.toDetailVC(drama: drama) })
+      .disposed(by: disposeBag)
   }
 
   override func viewWillDisappear(_ animated: Bool) {
@@ -78,6 +86,12 @@ class DramaListViewController: UIViewController {
     UIView.animate(withDuration: 0.3) {
       self.cancelButton.isHidden = isHidden
     }
+  }
+
+  private func toDetailVC(drama: Drama) {
+    let detailVC = DramaDetailViewController()
+    detailVC.setViewModel(viewModel: DramaDetailViewModel(drama: drama))
+    navigationController?.pushViewController(detailVC, animated: true)
   }
 }
 

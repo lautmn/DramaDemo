@@ -15,6 +15,13 @@
 		087D2BE5264198A70089D5B0 /* DramaListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 087D2BE3264198A70089D5B0 /* DramaListViewController.xib */; };
 		087D2BE8264198BB0089D5B0 /* DramaListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087D2BE7264198BB0089D5B0 /* DramaListViewModel.swift */; };
 		089759542647D73C00E5CB3E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089759532647D73C00E5CB3E /* String+Extension.swift */; };
+		089759572647E56B00E5CB3E /* DramaDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089759552647E56B00E5CB3E /* DramaDetailViewController.swift */; };
+		089759582647E56B00E5CB3E /* DramaDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089759562647E56B00E5CB3E /* DramaDetailViewController.xib */; };
+		0897595A2647E57600E5CB3E /* DramaDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089759592647E57600E5CB3E /* DramaDetailViewModel.swift */; };
+		0897595D2647E64B00E5CB3E /* DramaDetailHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897595B2647E64B00E5CB3E /* DramaDetailHeaderTableViewCell.swift */; };
+		0897595E2647E64B00E5CB3E /* DramaDetailHeaderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0897595C2647E64B00E5CB3E /* DramaDetailHeaderTableViewCell.xib */; };
+		089759602647EE2D00E5CB3E /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0897595F2647EE2D00E5CB3E /* Int+Extension.swift */; };
+		089759622647F21500E5CB3E /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 089759612647F21500E5CB3E /* DateFormatter+Extension.swift */; };
 		08AD9DE2264692DB0003138E /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AD9DE1264692DB0003138E /* Double+Extension.swift */; };
 		08AD9DE726469AED0003138E /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08AD9DE626469AED0003138E /* Date+Extension.swift */; };
 		08E0CCDB26419CE500AB5A20 /* Drama.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E0CCDA26419CE500AB5A20 /* Drama.swift */; };
@@ -35,6 +42,13 @@
 		087D2BE3264198A70089D5B0 /* DramaListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DramaListViewController.xib; sourceTree = "<group>"; };
 		087D2BE7264198BB0089D5B0 /* DramaListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaListViewModel.swift; sourceTree = "<group>"; };
 		089759532647D73C00E5CB3E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		089759552647E56B00E5CB3E /* DramaDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaDetailViewController.swift; sourceTree = "<group>"; };
+		089759562647E56B00E5CB3E /* DramaDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DramaDetailViewController.xib; sourceTree = "<group>"; };
+		089759592647E57600E5CB3E /* DramaDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaDetailViewModel.swift; sourceTree = "<group>"; };
+		0897595B2647E64B00E5CB3E /* DramaDetailHeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DramaDetailHeaderTableViewCell.swift; sourceTree = "<group>"; };
+		0897595C2647E64B00E5CB3E /* DramaDetailHeaderTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DramaDetailHeaderTableViewCell.xib; sourceTree = "<group>"; };
+		0897595F2647EE2D00E5CB3E /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		089759612647F21500E5CB3E /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		08AD9DE1264692DB0003138E /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
 		08AD9DE626469AED0003138E /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		08E0CCDA26419CE500AB5A20 /* Drama.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drama.swift; sourceTree = "<group>"; };
@@ -87,6 +101,9 @@
 				087D2BE2264198A70089D5B0 /* DramaListViewController.swift */,
 				087D2BE3264198A70089D5B0 /* DramaListViewController.xib */,
 				087D2BE7264198BB0089D5B0 /* DramaListViewModel.swift */,
+				089759552647E56B00E5CB3E /* DramaDetailViewController.swift */,
+				089759562647E56B00E5CB3E /* DramaDetailViewController.xib */,
+				089759592647E57600E5CB3E /* DramaDetailViewModel.swift */,
 				087D2BD0264198620089D5B0 /* Assets.xcassets */,
 				087D2BD2264198620089D5B0 /* LaunchScreen.storyboard */,
 				087D2BD5264198620089D5B0 /* Info.plist */,
@@ -98,8 +115,10 @@
 			isa = PBXGroup;
 			children = (
 				08AD9DE1264692DB0003138E /* Double+Extension.swift */,
+				0897595F2647EE2D00E5CB3E /* Int+Extension.swift */,
 				08AD9DE626469AED0003138E /* Date+Extension.swift */,
 				089759532647D73C00E5CB3E /* String+Extension.swift */,
+				089759612647F21500E5CB3E /* DateFormatter+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -118,6 +137,8 @@
 				08E0CCE026419EDE00AB5A20 /* DramaTableViewCell.swift */,
 				08E0CCE126419EDE00AB5A20 /* DramaTableViewCell.xib */,
 				08E0CCE526419EE800AB5A20 /* DramaTableViewCellViewModel.swift */,
+				0897595B2647E64B00E5CB3E /* DramaDetailHeaderTableViewCell.swift */,
+				0897595C2647E64B00E5CB3E /* DramaDetailHeaderTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -202,6 +223,8 @@
 				087D2BD4264198620089D5B0 /* LaunchScreen.storyboard in Resources */,
 				087D2BD1264198620089D5B0 /* Assets.xcassets in Resources */,
 				08E0CCE326419EDE00AB5A20 /* DramaTableViewCell.xib in Resources */,
+				089759582647E56B00E5CB3E /* DramaDetailViewController.xib in Resources */,
+				0897595E2647E64B00E5CB3E /* DramaDetailHeaderTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,15 +278,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				08E0CCDB26419CE500AB5A20 /* Drama.swift in Sources */,
+				0897595A2647E57600E5CB3E /* DramaDetailViewModel.swift in Sources */,
 				087D2BE4264198A70089D5B0 /* DramaListViewController.swift in Sources */,
+				089759602647EE2D00E5CB3E /* Int+Extension.swift in Sources */,
 				087D2BE8264198BB0089D5B0 /* DramaListViewModel.swift in Sources */,
 				08E0CCE226419EDE00AB5A20 /* DramaTableViewCell.swift in Sources */,
 				08AD9DE2264692DB0003138E /* Double+Extension.swift in Sources */,
 				08E0CCE626419EE800AB5A20 /* DramaTableViewCellViewModel.swift in Sources */,
+				089759622647F21500E5CB3E /* DateFormatter+Extension.swift in Sources */,
 				087D2BC8264198620089D5B0 /* AppDelegate.swift in Sources */,
 				087D2BCA264198620089D5B0 /* SceneDelegate.swift in Sources */,
+				0897595D2647E64B00E5CB3E /* DramaDetailHeaderTableViewCell.swift in Sources */,
 				089759542647D73C00E5CB3E /* String+Extension.swift in Sources */,
 				08AD9DE726469AED0003138E /* Date+Extension.swift in Sources */,
+				089759572647E56B00E5CB3E /* DramaDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

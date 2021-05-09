@@ -9,10 +9,8 @@ import Foundation
 
 extension Date {
   func toLocalDateString(_ format: String = "yyyy-MM-dd") -> String {
-    let formatter = DateFormatter()
-    print(formatter)
+    let formatter = DateFormatter.currentDateFormatter
     formatter.dateFormat = format
-    formatter.timeZone = .current
     return formatter.string(from: self)
   }
 }

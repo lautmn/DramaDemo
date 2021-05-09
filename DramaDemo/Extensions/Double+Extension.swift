@@ -14,7 +14,12 @@ extension Double {
     return (self * numberOfDigits).rounded(.toNearestOrAwayFromZero) / numberOfDigits
   }
 
-  func toString(format: String) -> String {
+  func toString(format: String? = nil) -> String {
+    guard let format = format else { return String(self) }
     return String(format: format, self)
+  }
+
+  func divided(by num: Double) -> Double {
+    return self / num
   }
 }

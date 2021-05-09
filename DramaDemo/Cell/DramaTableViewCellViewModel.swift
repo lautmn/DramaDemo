@@ -30,4 +30,8 @@ struct DramaTableViewCellViewModel {
   var thumbURL: URL? {
     return drama.thumb
   }
+
+  var totalViews: String {
+    return (drama.totalViews?.toDouble().divided(by: 10000).rounded(toDecimal: 1).toString(format: "%.1f") ?? "0") + "萬次觀看"
+  }
 }
