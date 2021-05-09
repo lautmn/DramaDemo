@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DramaDetailHeaderTableViewCell: UITableViewCell {
   
@@ -27,5 +28,6 @@ class DramaDetailHeaderTableViewCell: UITableViewCell {
     ratingLabel.text = viewModel.rating
     createTimeLabel.text = viewModel.createTime
     totalViewsLabel.text = viewModel.totalViews
+    thumbImageView.kf.setImage(with: viewModel.thumbURL)
   }
 }

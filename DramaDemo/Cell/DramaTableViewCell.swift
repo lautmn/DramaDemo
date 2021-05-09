@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class DramaTableViewCell: UITableViewCell {
   
@@ -25,6 +26,6 @@ class DramaTableViewCell: UITableViewCell {
     nameLabel.text = viewModel.name
     ratingLabel.text = viewModel.rating
     createTimeLabel.text = viewModel.createTime
+    thumbImageView.kf.setImage(with: viewModel.thumbURL)
   }
-
 }
