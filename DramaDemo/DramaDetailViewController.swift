@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DramaDetailViewController: UIViewController {
+class DramaDetailViewController: BaseViewController {
 
   @IBOutlet weak var detailTableView: UITableView!
 

@@ -7,14 +7,16 @@
 
 import UIKit
 import RxSwift
+import Network
 
-class DramaListViewController: UIViewController {
+class DramaListViewController: BaseViewController {
 
   @IBOutlet weak var dramaTableView: UITableView!
   @IBOutlet weak var searchBar: UISearchBar!
   @IBOutlet weak var cancelButton: UIButton!
   @IBOutlet weak var noSearchResultLabel: UILabel!
-  var disposeBag = DisposeBag()
+  @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+  @IBOutlet weak var networkErrorLabel: UILabel!
 
   var viewModel: DramaListViewModel?
 
@@ -34,13 +36,7 @@ class DramaListViewController: UIViewController {
       .bind(to: dramaTableView.rx.items(cellIdentifier: "DramaTableViewCell", cellType: DramaTableViewCell.self)) { row, element, cell in
         cell.viewModel = DramaTableViewCellViewModel(drama: element) }
 
-    searchBar.rx
-      .textDidBeginEditing
-      .asDriver()
-      .drive(
-        onNext: { [weak self] in
-          self?.setCancelButton(isHidden: false) })
-      .disposed(by: disposeBag)
+    navigationItem.title = "戲劇列表"
   }
 
   override func viewWillAppear(_ animated: Bool) {
@@ -69,11 +65,37 @@ class DramaListViewController: UIViewController {
         onNext: { [weak self] drama in
           self?.toDetailVC(drama: drama) })
       .disposed(by: disposeBag)
+
+    searchBar.rx
+      .textDidBeginEditing
+      .asDriver()
+      .drive(
+        onNext: { [weak self] in
+          self?.setCancelButton(isHidden: false) })
+      .disposed(by: disposeBag)
+
+    searchBar.rx.searchButtonClicked
+      .subscribe(
+        onNext: { [weak self] in
+          self?.view.endEditing(true) })
+      .disposed(by: disposeBag)
+
+    viewModel?.isLoadingIndicatorHidden
+      .asDriver()
+      .drive(
+        onNext: { [weak self] isHidden in
+          self?.loadingIndicator.isHidden = isHidden
+          _ = isHidden ? self?.loadingIndicator.stopAnimating() : self?.loadingIndicator.startAnimating() })
+      .disposed(by: disposeBag)
   }
 
   override func viewWillDisappear(_ animated: Bool) {
     disposeBag = DisposeBag()
     super.viewWillDisappear(animated)
+  }
+
+  override func networkDidUpdate(path: NWPath) {
+    networkErrorLabel.isHidden = path.status == .satisfied
   }
 
   @IBAction func pressedCancelButton(_ sender: Any) {
