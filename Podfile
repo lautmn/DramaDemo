@@ -10,5 +10,6 @@ target 'DramaDemo' do
   pod 'RxSwift', '6.1.0'
   pod 'RxCocoa', '6.1.0'
   pod 'Kingfisher', '6.3.0'
+  pod 'RealmSwift', '10.7.4'
 
 end
