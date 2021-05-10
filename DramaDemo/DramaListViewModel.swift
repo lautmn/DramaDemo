@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 import RxSwift
 import RxCocoa
+import RealmSwift
 
 class DramaListViewModel {
 
@@ -33,22 +34,36 @@ class DramaListViewModel {
     AF.request("https://static.linetv.tw/interview/dramas-sample.json")
       .validate()
       .responseDecodable(of: [String: [Drama]].self,
+                         queue: DispatchQueue.global(),
                          decoder: decoder,
                          completionHandler: { (response) in
                           self.isLoadingIndicatorHidden.accept(true)
+                          if let _ = response.error {
+                            self.dramas.accept(self.getLocalDramas())
+                            return
+                          }
                           guard let dramas = response.value?["data"] else { return }
                           self.dramas.accept(dramas)
-                          guard let date = dramas.first?.createdAt else { return }
-                          let localFormatter = DateFormatter()
-                          localFormatter.dateFormat = "yyyy/MM/dd HH:mm"
-                          localFormatter.timeZone = .current
-                          print(localFormatter.string(from: date))
-                         })
+                          self.saveDramas(dramas: dramas) })
   }
 
   private func getSearchDramas(dramas: [Drama], searchText: String) -> [Drama] {
     return dramas
       .sorted(by: { ($0.name?.getSimilarity(to: searchText) ?? 0) > ($1.name?.getSimilarity(to: searchText) ?? 0) })
       .filter { $0.name?.getSimilarity(to: searchText) ?? 0 > 0 }
+  }
+
+  private func saveDramas(dramas: [Drama]) {
+    let realm = try? Realm()
+    let dramaObjects = dramas.map { $0.toRealmObject() }
+    try? realm?.write {
+      realm?.add(dramaObjects)
+    }
+  }
+
+  private func getLocalDramas() -> [Drama] {
+    let realm = try? Realm()
+    guard let dramas = realm?.objects(DramaObject.self) else { return [] }
+    return Array(dramas.map { $0.toDrama() })
   }
 }
